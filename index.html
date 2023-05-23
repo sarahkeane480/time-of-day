@@ -17,38 +17,27 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            max-width: 960px;
-            /* keeps from getting too large on wide screen */
-            width: 90%;
-            /* shrink to fit screen */
-            margin: auto;
-            /* center in html element */
+            max-width: 960px; /* keeps from getting too large on wide screen */
+            width: 90%; /* shrink to fit screen */
+            margin: auto; /* center in html element */
             background-color: #fff;
             padding: 20px;
-            min-height: 100%;
-            /* keeps from getting too large on wide screen */
+            min-height: 100%; /* keeps from getting too large on wide screen */
         }
 
         img.flexible {
             float: right;
             display: inline-block;
             padding: 20px;
-            max-width: 300px;
-            /* actual size of image */
-            width: 33%;
-            /* approximate size taken on screen in maximum view */
+            max-width: 300px; /* actual size of image */
+            width: 33%; /* approximate size taken on screen in maximum view */
         }
 
         p {
             margin: 10px;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
+        h1,h2,h3,h4,h5,h6 {
             font-weight: normal;
             margin: 10px;
         }
@@ -59,8 +48,7 @@
 
         footer {
             text-align: center;
-            clear: both;
-            /* ride below all items */
+            clear: both; /* ride below all items */
         }
     </style>
 </head>
@@ -88,14 +76,14 @@
     <script>
 
         /*
-                Create a web page that uses JavaScript to determine the current hour,
-                and presents a different image, custom message, and color
-                based on each of the following times of day:
-        
-                Morning (5am to 12 noon)
-                Afternoon (12 noon to 6pm)
-                Evening (6pm to 11pm)
-                Night (11pm to 5am)
+        Create a web page that uses JavaScript to determine the current hour,
+        and presents a different image, custom message, and color
+        based on each of the following times of day:
+
+        Morning (5am to 12 noon)
+        Afternoon (12 noon to 6pm)
+        Evening (6pm to 11pm)
+        Night (11pm to 5am)
         */
 
         let myDate = new Date();
