@@ -1,70 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Time of Day</title>
     <meta name="robots" content="noindex,nofollow">
     <style>
-        * {padding:0; margin:0;}
-        html {background-color:#ccc;}
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            background-color: #ccc;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
-            max-width:960px; /* keeps from getting too large on wide screen */
-            width:90%; /* shrink to fit screen */
-            margin:auto; /* center in html element */
-            background-color:#fff;
-            padding:20px;
-            min-height:100%; /* keeps from getting too large on wide screen */
+            max-width: 960px;
+            /* keeps from getting too large on wide screen */
+            width: 90%;
+            /* shrink to fit screen */
+            margin: auto;
+            /* center in html element */
+            background-color: #fff;
+            padding: 20px;
+            min-height: 100%;
+            /* keeps from getting too large on wide screen */
         }
+
         img.flexible {
-            float:right;
-            display:inline-block;
-            padding:20px;
-            max-width:300px; /* actual size of image */
-            width:33%; /* approximate size taken on screen in maximum view */
+            float: right;
+            display: inline-block;
+            padding: 20px;
+            max-width: 300px;
+            /* actual size of image */
+            width: 33%;
+            /* approximate size taken on screen in maximum view */
         }
-        p {margin:10px;}
-        h1,h2,h3,h4,h5,h6{
-            font-weight:normal;
-            margin:10px;
+
+        p {
+            margin: 10px;
         }
-        h1.masthead {margin-top:0;}
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: normal;
+            margin: 10px;
+        }
+
+        h1.masthead {
+            margin-top: 0;
+        }
+
         footer {
-            text-align:center;
-            clear:both; /* ride below all items */
+            text-align: center;
+            clear: both;
+            /* ride below all items */
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1 class="masthead">Time of Day</h1>
     </header>
     <main>
-        <header><h3>A JavaScript Project by YOUR NAME HERE</h3></header>
+        <header>
+            <h3>A JavaScript Project by YOUR NAME HERE</h3>
+        </header>
         <h3 id="my-greeting">Greeting goes here</h3>
         <p>Explain what your page does and how it works here!</p>
         <img id="my-pic" src="http://dummyimage.com/300x400" alt="Time of Day Image" class="flexible">
         <footer>
-            <p><small>&copy; 2022 by 
-                YOUR NAME HERE, All Rights Reserved ~ 
-                <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
-                <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
+            <p><small>&copy; 2022 by
+                    YOUR NAME HERE, All Rights Reserved ~
+                    <a id="html-checker" href="#" target="_blank">Check HTML</a> ~
+                    <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
             </p>
         </footer>
     </main>
     <!-- javascript goes here ! -->
     <script>
-        
-/*
-        Create a web page that uses JavaScript to determine the current hour,
-        and presents a different image, custom message, and color
-        based on each of the following times of day:
 
-        Morning (5am to 12 noon)
-        Afternoon (12 noon to 6pm)
-        Evening (6pm to 11pm)
-        Night (11pm to 5am)
-*/
+        /*
+                Create a web page that uses JavaScript to determine the current hour,
+                and presents a different image, custom message, and color
+                based on each of the following times of day:
+        
+                Morning (5am to 12 noon)
+                Afternoon (12 noon to 6pm)
+                Evening (6pm to 11pm)
+                Night (11pm to 5am)
+        */
 
         let myDate = new Date();
         let myHour = myDate.getHours();
@@ -76,9 +108,9 @@
         // We use this to log information to the console, for debugging!
         console.log(myHour);
 
-        
+
         // TODO: Update conditions for afternoon/evening/night
-        if(myHour >= 5 && myHour < 12){
+        if (myHour >= 5 && myHour < 12) {
             // alert("good morning!")
             myGreeting = "Good Morning!";
             myColor = "orange";
@@ -104,14 +136,15 @@
         document.getElementById("my-greeting").innerHTML = myGreeting;
 
         document.querySelector("html").style.backgroundColor = myColor;
-        
+
         document.getElementById("my-pic").src = myPic;
 
 
-        
-        document.getElementById("html-checker").setAttribute("href","https://validator.w3.org/nu/?doc=" + location.href);
-        document.getElementById("css-checker").setAttribute("href","https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);  
+
+        document.getElementById("html-checker").setAttribute("href", "https://validator.w3.org/nu/?doc=" + location.href);
+        document.getElementById("css-checker").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);  
     </script>
-    
+
 </body>
+
 </html>
