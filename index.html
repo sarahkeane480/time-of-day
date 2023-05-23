@@ -60,10 +60,10 @@
         and presents a different image, custom message, and color
         based on each of the following times of day:
 
-        TODO: Morning (5am to 12 noon)
-        TODO: Afternoon (12 noon to 6pm)
-        TODO: Evening (6pm to 11pm)
-        TODO: Night (11pm to 5am)
+        Morning (5am to 12 noon)
+        Afternoon (12 noon to 6pm)
+        Evening (6pm to 11pm)
+        Night (11pm to 5am)
 */
 
         let myDate = new Date();
@@ -75,17 +75,29 @@
 
         // We use this to log information to the console, for debugging!
         console.log(myHour);
+
         
-        if(myHour < 12){
+        // TODO: Update conditions for afternoon/evening/night
+        if(myHour >= 5 && myHour < 12){
             // alert("good morning!")
             myGreeting = "Good Morning!";
             myColor = "orange";
             myPic = "images/morning.jpg";
-        } else {
+        } else if (myHour >= 5 && myHour < 12) {
             // alert("good afternooon!")
             myGreeting = "Good Afternoon!";
             myColor = "green";
             myPic = "images/afternoon.jpg";
+        } else if (myHour >= 5 && myHour < 12) {
+            // alert("good afternooon!")
+            myGreeting = "Good Evening!";
+            myColor = "darkblue";
+            myPic = "images/evening.jpg";
+        } else {
+            // alert("good afternooon!")
+            myGreeting = "Good Night!";
+            myColor = "black";
+            myPic = "images/night.jpg";
         }
 
 
