@@ -91,30 +91,33 @@
         let myGreeting = "";
         let myColor = "";
         let myPic = "";
-        // let myHour = 5
+
+        // debug variables, uncomment to test
+        // myHour = 5; // Morning
+        // myHour = 12; // Afternoon
+        // myHour = 18; // Evening
+        // myHour = 23; // Night
 
         // We use this to log information to the console, for debugging!
         console.log(myHour);
 
-
-        // TODO: Update conditions for afternoon/evening/night
         if (myHour >= 5 && myHour < 12) {
-            // alert("good morning!")
+            // Morning
             myGreeting = "Good Morning!";
             myColor = "orange";
             myPic = "images/morning.jpg";
-        } else if (myHour >= 5 && myHour < 12) {
-            // alert("good afternooon!")
+        } else if (myHour >= 12 && myHour < 18) {
+            // Afternoon
             myGreeting = "Good Afternoon!";
             myColor = "green";
             myPic = "images/afternoon.jpg";
-        } else if (myHour >= 5 && myHour < 12) {
-            // alert("good afternooon!")
+        } else if (myHour >= 18 && myHour < 23) {
+            // Evening
             myGreeting = "Good Evening!";
             myColor = "darkblue";
             myPic = "images/evening.jpg";
         } else {
-            // alert("good afternooon!")
+            // Night
             myGreeting = "Good Night!";
             myColor = "black";
             myPic = "images/night.jpg";
